@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { connect } from 'react-redux';
+
+export class App extends React.Component {
+  render() {
+    const presenceData = this.props.onlineUsers.byId[Object.keys(this.props.onlineUsers.byId)];
+
+    const messages = this.props.messages.byId[Object.keys(this.props.messages.byId)] || [];
+    const onlineUsers = presenceData ? presenceData.occupants : [];
+     
+    return (
+      <div className="row">
+        <div className="column">
+          <ul>
+            {messages.map(function(message){
+              return <li key={ message.timetoken }>{message.message.message} </li>;
+            })}
+          </ul>
+        </div>
+        <div className="column">
+          <ul>
+            {onlineUsers.map(function(user){
+              return <li key={ user.uuid }>{user.uuid} </li>;
+            })}
+          </ul>
+        </div>
+        <div className="column"></div>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  messages: state.messages,
+  onlineUsers: state.onlineUsers
+});
+
+const AppContainer = connect(
+  mapStateToProps
+)(App);
+
+export default AppContainer;
