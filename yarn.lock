@@ -9087,10 +9087,10 @@ public-encrypt@^4.0.0:
     randombytes "^2.0.1"
     safe-buffer "^5.1.2"
 
-pubnub-redux@^0.0.9-beta:
-  version "0.0.9-beta"
-  resolved "https://artifactnub1.jfrog.io/artifactnub1/api/npm/npm-virtual/pubnub-redux/-/pubnub-redux-0.0.9-beta.tgz#bad4b00506e527a78a1347410e5f6dd608493ff5"
-  integrity sha1-utSwBQblJ6eKE0dBDl9t1ghJP/U=
+pubnub-redux@^0.0.11:
+  version "0.0.11"
+  resolved "https://artifactnub1.jfrog.io/artifactnub1/api/npm/npm-virtual/pubnub-redux/-/pubnub-redux-0.0.11.tgz#a84e245d75840ff8c74e6de69f6ad9eebf1c2f55"
+  integrity sha1-qE4kXXWED/jHTm3mn2rZ7r8cL1U=
 
 pubnub@^4.27.6, pubnub@^4.28.4:
   version "4.28.4"

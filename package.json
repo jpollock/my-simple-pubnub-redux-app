@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "graphql-pubnub-subscriptions": "^1.0.0",
     "pubnub": "^4.28.4",
-    "pubnub-redux": "^0.0.9-beta",
+    "pubnub-redux": "^0.0.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
